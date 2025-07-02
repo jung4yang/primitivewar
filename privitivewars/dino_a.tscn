@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqqdir40of07e"]
+
+[ext_resource type="Script" uid="uid://klhgif45ykw1" path="res://dino.gd" id="1_mwp3n"]
+[ext_resource type="Texture2D" uid="uid://b4fqyhd7l8vsu" path="res://Assets/Dino1.png" id="2_mpp68"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ih34d"]
+size = Vector2(77, 112)
+
+[node name="Dino_a" type="CharacterBody2D" groups=["Enemy"]]
+script = ExtResource("1_mwp3n")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0964467, 0.0964467)
+texture = ExtResource("2_mpp68")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-10.5, -2)
+shape = SubResource("RectangleShape2D_ih34d")

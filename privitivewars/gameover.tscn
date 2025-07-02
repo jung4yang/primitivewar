@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://dp2vn8ndy0ru7"]
+
+[ext_resource type="Texture2D" uid="uid://shrncbinwn7r" path="res://Assets/Restartbutton.png" id="1_4nh4k"]
+[ext_resource type="Texture2D" uid="uid://bp0fw6h8uec8q" path="res://Assets/Gameover.png" id="2_tpdqf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tpdqf"]
+texture = ExtResource("1_4nh4k")
+texture_margin_left = 30.0
+texture_margin_top = 30.0
+texture_margin_right = 30.0
+texture_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eeur3"]
+texture = ExtResource("1_4nh4k")
+
+[node name="Gameover" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1541.0
+offset_bottom = 1025.0
+color = Color(0.334511, 0.175193, 0.0262535, 1)
+
+[node name="Button" type="Button" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 564.0
+offset_top = 606.0
+offset_right = 968.0
+offset_bottom = 724.0
+theme_override_styles/hover = SubResource("StyleBoxTexture_tpdqf")
+theme_override_styles/normal = SubResource("StyleBoxTexture_eeur3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(772, 507)
+texture = ExtResource("2_tpdqf")
